@@ -49,7 +49,7 @@ def create_data(db):
         path = 'data/_posts/'
         if not os.path.exists(path):
             os.makedirs(path)
-        f = codecs.open('%s%s.md' % (path, title), 'w', "utf-8")
+        f = codecs.open('%s%s.md' % (path, cid), 'w', "utf-8")
         f.write("title: %s\n" % title)
         f.write("date: %s\n" % arrow.get(e.created).format('YYYY-MM-DD HH:mm:ss'))
         f.write("categories: %s\n" % category)
